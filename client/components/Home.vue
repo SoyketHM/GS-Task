@@ -1,10 +1,8 @@
 <template>
-  <div class="container">
-    <Navbar />
-
+  <div>
     <b-row class="mt-5">
       <b-col>
-        <students/>
+        <students />
       </b-col>
     </b-row>
   </div>

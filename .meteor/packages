@@ -24,3 +24,6 @@ akryum:vue-component
 akryum:vue-router2
 akryum:vue
 static-html
+meteortesting:mocha
+akryum:vue-less
+akryum:vue-sass

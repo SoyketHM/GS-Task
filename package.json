@@ -16,9 +16,7 @@
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.0.0",
-    "vue-select": "^3.10.8",
-    "vuelidate": "^0.7.6",
-    "vuetify": "^2.3.18"
+    "vue-select": "^3.10.8"
   },
   "meteor": {
     "mainModule": {
@@ -27,5 +25,7 @@
     },
     "testModule": "tests/main.js"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0"
+  }
 }

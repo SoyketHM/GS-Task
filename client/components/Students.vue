@@ -7,7 +7,7 @@
           <div><b-button to="/add-student">Add Student</b-button></div>
         </div>
       </template>
-      
+
       <b-table striped hover :items="students" :fields="fields">
         <template #cell(subjects)="row">
           <b-badge
@@ -20,11 +20,7 @@
         </template>
 
         <template #cell(actions)="row">
-          <b-button
-            size="sm"
-            @click="deleteSubject(row.item._id)"
-            class="mr-1"
-          >
+          <b-button size="sm" @click="deleteSubject(row.item._id)" class="mr-1">
             Delete
           </b-button>
 

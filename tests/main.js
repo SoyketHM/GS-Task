@@ -1,4 +1,6 @@
 import assert from "assert";
+import './students.test';
+import './subjects.test';
 
 describe("gstask", function () {
   it("package.json has correct name", async function () {

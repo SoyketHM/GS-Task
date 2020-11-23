@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <Navbar />
-
     <b-row class="mt-5">
       <b-col>
         <router-view></router-view>
