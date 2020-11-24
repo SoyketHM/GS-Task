@@ -30,7 +30,7 @@
           </b-button>
           <b-button
             size="sm"
-            @click="deleteSubject(row.item._id)"
+            @click="deleteStudent(row.item._id)"
             class="mr-1"
             variant="danger"
           >

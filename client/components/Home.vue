@@ -1,10 +1,6 @@
 <template>
   <div>
-    <b-row class="mt-5">
-      <b-col>
-        <students />
-      </b-col>
-    </b-row>
+    <students />
   </div>
 </template>
 <script>

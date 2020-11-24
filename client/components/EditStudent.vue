@@ -94,6 +94,7 @@ export default {
         name: this.editData.name,
         email: this.editData.email,
         phone: this.editData.phone,
+        dob: this.editData.dob,
         subjects: this.editData.subjects,
         updatedAt: new Date(),
       };
@@ -132,7 +133,7 @@ export default {
 </script>
 <style scoped>
 .inpt {
-  box-shadow: 1px 2px 5px #8b8080;
+  box-shadow: 1px 2px 5px #8b808024;
 }
 h3{
   padding: 10px 0;
