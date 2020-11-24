@@ -59,6 +59,7 @@
         <v-select
           id="input-4"
           :options="subjects"
+          :reduce="subject => subject._id"
           v-model="editData.subjects"
           label="name"
           class="inpt"

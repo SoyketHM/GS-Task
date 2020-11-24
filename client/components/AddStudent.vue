@@ -60,6 +60,7 @@
           class="inpt"
           id="input-4"
           :options="subjects"
+          :reduce="subject => subject._id"
           v-model="newStudent.subjects"
           label="name"
           multiple

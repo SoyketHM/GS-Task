@@ -17,7 +17,7 @@
             v-for="(subject, index) in row.item.subjects"
             :key="index"
             class="mx-1"
-            >{{ subject.name }}</b-badge
+            >{{ subjectById(subject) }}</b-badge
           >
         </template>
 
@@ -25,8 +25,9 @@
           <b-button
             :to="`/edit-student/${row.item._id}`"
             class="btn btn-info btn-sm"
-            >Edit</b-button
           >
+            <b-icon-pencil-square></b-icon-pencil-square>
+          </b-button>
           <b-button
             size="sm"
             @click="deleteSubject(row.item._id)"
@@ -42,6 +43,7 @@
 </template>
 <script>
 import { Students } from "../../imports/collections/students";
+import { Subjects } from "../../imports/collections/subjects";
 export default {
   name: "students",
   data() {
@@ -52,6 +54,13 @@ export default {
   methods: {
     deleteStudent(id) {
       Students.remove(id);
+    },
+    subjectById(id) {
+      let subName = Subjects.findOne({_id: id}, {fields: {'name': 1, _id: 0}});
+      if (subName) {        
+        return subName.name;
+      }
+        return null;
     },
   },
   mounted() {},

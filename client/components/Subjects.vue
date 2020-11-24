@@ -16,15 +16,16 @@
             v-for="(student, index) in row.item.students"
             :key="index"
             class="mx-1"
-            >{{ student.name }}</b-badge
+            >{{ studentById(student) }}</b-badge
           >
         </template>
         <template #cell(actions)="row">
           <b-button
             :to="`/edit-subject/${row.item._id}`"
             class="btn btn-info btn-sm"
-            >Edit</b-button
           >
+            <b-icon-pencil-square></b-icon-pencil-square>
+          </b-button>
           <b-button
             size="sm"
             @click="deleteSubject(row.item._id)"
@@ -40,6 +41,7 @@
 </template>
 <script>
 import { Subjects } from "../../imports/collections/subjects";
+import { Students } from "../../imports/collections/students";
 export default {
   name: "subjects",
   props: ["subjects"],
@@ -48,9 +50,19 @@ export default {
       fields: ["name", "students", "actions"],
     };
   },
+  computed: {    
+    
+  },
   methods: {
     deleteSubject(id) {
       Subjects.remove(id);
+    },
+    studentById(id) {
+      let stdName = Students.findOne({_id: id}, {fields: {'name': 1, _id: 0}});
+      if (stdName) {        
+        return stdName.name;
+      }
+        return null;
     },
   },
   meteor: {

@@ -16,6 +16,7 @@
         <v-select
           id="input-4"
           :options="students"
+          :reduce="student => student._id"
           v-model="newSubject.students"
           label="name"
           class="inpt"
