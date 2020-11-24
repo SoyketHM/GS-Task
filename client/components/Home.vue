@@ -8,7 +8,6 @@
   </div>
 </template>
 <script>
-import Navbar from "./Navbar.vue";
 import students from "./Students.vue";
 import addStudent from "./AddStudent.vue";
 import subjects from "./Subjects.vue";
@@ -16,7 +15,6 @@ import subjects from "./Subjects.vue";
 export default {
   name: "home",
   component: {
-    Navbar,
     students,
     subjects,
   },

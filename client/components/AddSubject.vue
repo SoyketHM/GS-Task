@@ -1,10 +1,12 @@
 <template>
   <div class="col-6 m-auto">
+    <h3>Add Subject</h3>
     <b-form @submit="addSubject">
       <b-form-group id="input-group-1" label="Subject Name" label-for="input-1">
         <b-form-input
           id="input-1"
           type="text"
+          class="inpt"
           placeholder="Enter subject name"
           v-model="newSubject.name"
         ></b-form-input>
@@ -16,6 +18,7 @@
           :options="students"
           v-model="newSubject.students"
           label="name"
+          class="inpt"
           multiple
         ></v-select>
       </b-form-group>
@@ -62,3 +65,11 @@ export default {
   },
 };
 </script>
+<style scoped>
+.inpt {
+  box-shadow: 1px 2px 5px #8b8080;
+}
+h3{
+  padding: 10px 0;
+}
+</style>
